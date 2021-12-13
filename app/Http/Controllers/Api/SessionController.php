@@ -104,7 +104,7 @@ class SessionController extends Controller
     {
         $session = session::with("mosque")->where("id",$id)->first();
         if( $session){
-            $group = group::where("teacher_id",$request->teacher_id)->where("session_id",$id)->get();
+            $group = group::where("teacher_id",$request->teacher_id)->where("session_id",$id)->first();
             if($group){
                 $detials = group_detials::with("group")->where("group_id",$group->id)->get();
                 $all = array("group"=>$detials,"session"=>$session);

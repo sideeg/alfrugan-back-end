@@ -92,10 +92,10 @@ class groupDetialsController extends Controller
         $form->delete();
 
 
-        Session::flash('SUCCESS','This group Successfully Delete  !');
+        // Session::flash('SUCCESS','This group Successfully Delete  !');
 
 
-        return $this->index();
+        return $this->index($id);
     }
 
     /********************************

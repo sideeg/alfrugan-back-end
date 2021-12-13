@@ -42,7 +42,7 @@ Route::get('/group/filterby/session/{id}','App\Http\Controllers\groupController@
 Route::get('/group/{id}/detials','App\Http\Controllers\groupDetialsController@index');
 Route::get('/group/{id}/detials/create','App\Http\Controllers\groupDetialsController@create')->name('group.detials.create');
 Route::post('/group/{id}/detials/store','App\Http\Controllers\groupDetialsController@store')->name('group.detials.store');
-Route::post('/group/{id}/detials/destroy','App\Http\Controllers\groupDetialsController@destroy')->name('group.detials.destroy');
+Route::delete('/group/{id}/detials/destroy','App\Http\Controllers\groupDetialsController@destroy')->name('group.detials.destroy');
 Route::get('/group/detials/{id}','App\Http\Controllers\groupDetialsController@formDetials')->name('group.detials.form');
 
 Route::get('/profile.edit', function () {

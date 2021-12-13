@@ -1,6 +1,6 @@
 @extends('layouts.app')
 {{-- for Link Active --}}
-@section('group','active')
+@section('group_detials','active')
 @section('content')
 <div class="row">
   <div class="col-md-9 table_title">

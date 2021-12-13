@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('group','active')
+@section('group_detials','active')
 @section('content')
 
 <div class="container ">
