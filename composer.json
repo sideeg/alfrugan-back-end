@@ -15,7 +15,12 @@
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.12",
         "laravel/tinker": "^2.5",
+<<<<<<< HEAD
         "laravel/ui": "^3.2"
+=======
+        "laravel/ui": "^3.2",
+        "pragmarx/countries": "^0.7.2"
+>>>>>>> 6f7daf7 (anything)
     },
     "require-dev": {
         "facade/ignition": "^2.5",
