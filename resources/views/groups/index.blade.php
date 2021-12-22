@@ -15,7 +15,7 @@
 
     <div class="container ">
         <div class="col-md-12">
-        <a href="{{ route('group.create')}}"><button ><strong>create new group</strong></button></a>
+        <a href="{{ route('group.create')}}"><button ><strong>إنشاء مجموعة جديدة</strong></button></a>
 
         <div class="btn-group col-md-2 normal_add">
             <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
@@ -37,11 +37,11 @@
             <thead>
 
                 <th>ID</th>
-                <th>group Name</th>
-                <th>session name</th>
-                <th>teacher name </th>
+                <th>اسم المجموعة</th>
+                <th>اسم الدورة</th>
+                <th>اسم المحفظ </th>
                 
-                <th  width="255px"><i class="fa fa-gear fa-lg mr"></i>Operations</th>
+                <th  width="255px"><i class="fa fa-gear fa-lg mr"></i>العمليات</th>
 
 
             </thead>
@@ -58,6 +58,9 @@
                         <td>
                             <a href="{{ route('group.edit', $group->id)}}">
                                 <button  type="submit" class="btn btn-primary  pull-right bold "  >تعديل<i class="fa fa-pencil "></i></button>
+                            </a>
+                            <a href="/group/{{$group->id}}/detials">
+                                <button  type="submit" class="btn btn-primary  pull-right bold "  >تفاصيل المجموعة<i class="fa fa-pencil "></i></button>
                             </a>
 
                         <!--start Form For delete Superviser data  /////////////////////-->

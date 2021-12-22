@@ -74,31 +74,31 @@
                                 </li>
 
                                 <li class="nav-item mt-1 ">
-                                    <a class="nav-link @yield('teacher')" href="{{route('teacher.index')}}">Teachers</a>
+                                    <a class="nav-link @yield('teacher')" href="{{route('teacher.index')}}">المحفظين</a>
                                 </li>
 
                                 <li class="nav-item mt-1 ">
-                                    <a class="nav-link @yield('student')" href="{{route('student.index')}}">students</a>
+                                    <a class="nav-link @yield('student')" href="{{route('student.index')}}">الطلاب</a>
                                 </li>
 
                                 <li class="nav-item mt-1 ">
-                                    <a class="nav-link @yield('mosque')" href="{{route('mosque.index')}}">mosques</a>
+                                    <a class="nav-link @yield('mosque')" href="{{route('mosque.index')}}">المساجد</a>
                                 </li>
 
                                 <li class="nav-item mt-1 ">
-                                    <a class="nav-link @yield('session')" href="{{route('session.index')}}">sessions</a>
+                                    <a class="nav-link @yield('session')" href="{{route('session.index')}}">الدورات</a>
                                 </li>
 
                                 <li class="nav-item mt-1 ">
-                                    <a class="nav-link @yield('session_reqester_request')" href="{{route('session_reqester_request.index')}}">session reqester request</a>
+                                    <a class="nav-link @yield('session_reqester_request')" href="{{route('session_reqester_request.index')}}">طلبات التسجيل في الدورات</a>
                                 </li>
 
                                 <li class="nav-item mt-1 ">
-                                    <a class="nav-link @yield('group')" href="{{route('group.index')}}">groups</a>
+                                    <a class="nav-link @yield('group')" href="{{route('group.index')}}">المجموعات</a>
                                 </li>
 
                                 <li class="nav-item mt-1 ">
-                                    <a class="nav-link @yield('group_detials')" href="{{'/group/1/detials'}}">groups detials</a>
+                                    <a class="nav-link @yield('group_detials')" href="{{'/group/1/detials'}}">تفاصيل المجموعات</a>
                                 </li>
 
                             

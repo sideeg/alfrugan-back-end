@@ -9,11 +9,11 @@
         @csrf
         @method('PUT')
         <div class="form-group">
-            <strong>teacher name : </strong>
+            <strong>: اسم المحفظ</strong>
             <label  class="form-control" >{{$group->teacher->name_ar}}</label>
         </div>
         <div class="form-group">
-          <strong>session name:</strong>
+          <strong>:اسم الدورة </strong>
           <label class="form-control" >{{$group->session->name_ar}}</label>
         </div>
         <div class="form-group">
@@ -22,7 +22,7 @@
         </div>
         {{-- Start teacher --}}
               <div class="col">
-                <label class="mt-2" for="">teacher name</label>
+                <label class="mt-2" for="">اسم المحفظ</label>
                 <select name="teacher_id" required class="custom-select mr-sm-2"id="inlineFormCustomSelect">
                   <option></option>
                   @foreach ($teachers as $teacher)
@@ -35,7 +35,7 @@
             {{-- End teacher --}}
         
 
-        <button type = "submit" class = "btn btn-success">Submit</button>
+        <button type = "submit" class = "btn btn-success">حفظ</button>
       </form>
     </div>
   </div>

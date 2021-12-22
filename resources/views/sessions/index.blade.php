@@ -4,22 +4,22 @@
 @section('content')
 <div class="container ">
     <div class="col-md-12">
-<a href="{{ route('session.create')}}"><button ><strong>create new session</strong></button>
+<a href="{{ route('session.create')}}"><button ><strong>إنشاء دورة جديدة</strong></button>
 </a>    
     <div class="table-responsive">
         <table class="table table-bordered table-condensed table-striped table-right">
             <thead>
 
                 <th>ID</th>
-                <th>Name</th>
-                <th>start_date</th>
-                <th>end_date</th>
-                <th>mosque name</th>
-                <th>teacher </th>
-                <th>session_type</th>
-                <th>register_available</th>
+                <th>اسم الدورة</th>
+                <th>تاريخ البداية</th>
+                <th>تاريخ النهاية</th>
+                <th>اسم المسجد</th>
+                <th>اسم المشرف </th>
+                <th>نوع الدورة</th>
+                <th>هل التسجيل متاح؟</th>
 
-                <th  width="255px"><i class="fa fa-gear fa-lg mr"></i>Operations</th>
+                <th  width="255px"><i class="fa fa-gear fa-lg mr"></i>العمليات</th>
 
 
             </thead>
@@ -51,15 +51,7 @@
                          <!--end Form For delete Superviser data  /////////////////////-->
 
                         </td>
-                    {{-- <td>
-                        <a href="{{ route('session.edit', $session->id)}}" class="btn btn-primary">Edit</a>
-
-                        <form action="{{ route('session.destroy', $session->id)}}" method="post">
-                            @csrf @method('DELETE')
-                            <button class="btn btn-danger" type="submit">Delete</button>
-                        </form>
-
-                    </td> --}}
+                   
                 </tr>
                 @endforeach
             </tbody>

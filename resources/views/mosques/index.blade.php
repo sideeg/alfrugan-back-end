@@ -4,20 +4,20 @@
 @section('content')
 <div class="container ">
     <div class="col-md-12">
-    <a href="{{ route('mosque.create')}}"><button ><strong>create new mosque</strong></button></a>
+    <a href="{{ route('mosque.create')}}"><button ><strong>إضافة مسجد جديد</strong></button></a>
 
     <div class="table-responsive">
         <table class="table table-bordered table-condensed table-striped table-right">
             <thead>
 
                 <th>ID</th>
-                <th>Name</th>
-                <th>brief_location_description</th>
-                <th>full_location_description </th>
+                <th>الاسم</th>
+                <th>وصف مختصر لموقع المسجد</th>
+                <th>الوصف كامل لموقع المسجد </th>
                 <th>lat</th>
                 <th>long </th>
-                <th>Image</th>
-                <th  width="255px"><i class="fa fa-gear fa-lg mr"></i>Operations</th>
+                <th>الصورة</th>
+                <th  width="255px"><i class="fa fa-gear fa-lg mr"></i>العمليات</th>
 
 
             </thead>
@@ -32,7 +32,7 @@
                     <td>{{$mosque->full_location_description }}</td>
                     <td>{{$mosque->lat }}</td>
                     <td>{{$mosque->long }}</td>
-                    <td><img src="{{ $mosque->image }}" height="75" width="75" alt="img" /></td>
+                    <td><img src="assert({{ $mosque->image }})" height="75" width="75" alt="img" /></td>
                    
                     <td>
                         <a href="{{ route('mosque.edit', $mosque->id)}}">

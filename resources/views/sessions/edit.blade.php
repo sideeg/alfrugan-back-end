@@ -9,43 +9,46 @@
             @csrf
                 @method('PUT')
         <div class="form-group">
-          <label for="name_ar">name AR:</label>
+          <label for="name_ar">:الاسم باللغة العربية</label>
           <input type="text" name = "name_ar" id = "name_ar" class="form-control" value="{{$session->name_ar}}">
         </div>
         <div class="form-group">
-          <label for="name_en">name EN:</label>
+          <label for="name_en">:الاسم باللغة الانجليزية</label>
           <input type="text" name = "name_en" id = "name_en" class="form-control" value="{{$session->name_en}}">
         </div>
         <div class="form-group">
-            <label for="start_date">start_date:</label>
+            <label for="start_date">:تاريخ البداية</label>
             <input type="date" name = "start_date" id = "start_date" class="form-control" value="{{$session->start_date}}">
           </div>
         <div class="form-group">
-          <label for="end_date">end date:</label>
+          <label for="end_date">:تاريخ النهاية </label>
           <input type="date" name = "end_date" id = "end_date" class="form-control" value="{{$session->end_date}}" >
         </div>
         <div class="form-group">
-          <label for="brief_ar">brief_ar:</label>
+          <label for="brief_ar">:نبذة مختصرة باللغة العربية </label>
           <input type="text" name = "brief_ar" id = "brief_ar" class="form-control" value="{{$session->brief_ar}}" >
         </div>
         <div class="form-group">
-          <label for="brief_en">brief_en:</label>
+          <label for="brief_en">:نبذة مختصرة باللغة الانجليزية</label>
           <input type="text" name = "brief_en" id = "brief_en" class="form-control" value="{{$session->brief_en}}">
         </div>
         <div class="form-group">
-          <label for="reason_registry_suspension">reason_registry_suspension:</label>
+          <label for="reason_registry_suspension">:سبب ايقاف التسجيل بالدورة (اذا الكان التسجيل غير متاح)</label>
           <input type="text" name = "reason_registry_suspension" id = "reason_registry_suspension" class="form-control" value="{{$session->reason_registry_suspension}}">
         </div>
-        <div class="form-group">
-            <label for="register_available">register_available:</label>
-            <input type="text" name = "register_available" id = "register_available" class="form-control" value="{{$session->register_available}}">
-          </div>
+        <div class="col">
+          <label class="mt-2" for="">هل التسجيل متاح؟</label>
+          <select name="register_available" required class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+              <option value="0">لا</option>
+              <option value="1">نعم</option>
+          </select>
+        </div>
         
         {{-- ROW --}}
           <div class="row">
             {{-- Start mosque --}}
               <div class="col">
-                <label class="mt-2" for="">mosque name</label>
+                <label class="mt-2" for=""> اسم المسجد</label>
                 <select name="mosque_id" required class="custom-select mr-sm-2"
                 id="inlineFormCustomSelect" >
                   <option></option>
@@ -59,7 +62,7 @@
             {{-- End mosque --}}
             {{-- Start teacher --}}
               <div class="col">
-                <label class="mt-2" for="">teacher name</label>
+                <label class="mt-2" for="">اسم المشرف</label>
                 <select name="teacher_id" required class="custom-select mr-sm-2"
                 id="inlineFormCustomSelect">
                   <option></option>
@@ -73,7 +76,7 @@
             {{-- End teacher --}}
             {{-- Start session_type --}}
               <div class="col">
-                <label class="mt-2" for="">session Type</label>
+                <label class="mt-2" for=""> نوع الدورة</label>
                 <select name="session_type_id" required class="custom-select mr-sm-2"
                 id="inlineFormCustomSelect">
                   <option></option>
@@ -96,7 +99,7 @@
            @enderror
         </div>
 
-        <button type = "submit" class = "btn btn-success">Submit</button>
+        <button type = "submit" class = "btn btn-success">حفظ</button>
       </form>
     </div>
   </div>

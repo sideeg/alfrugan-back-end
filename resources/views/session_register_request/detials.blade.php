@@ -7,63 +7,63 @@
     <div class="col-sm-8 offset-sm-2">
        
         <div class="form-group">
-          <label for="name_ar">name AR:</label>
+          <label for="name_ar">:الاسم باللغة العربية</label>
           <label class="form-control">{{$detials->name_ar}}</label>
         </div>
         <div class="form-group">
-          <label for="name_en">name EN:</label>
+          <label for="name_en">:الاسم باللغة الانجليزية</label>
           <label class="form-control">{{$detials->name_en}}</label>
         </div>
         <div class="form-group">
-            <label for="password">password:</label>
+            <label for="password">:كلمة المرور</label>
             <label class="form-control">{{$detials->password}}</label>
           </div>
         <div class="form-group">
-          <label for="phone_number">phone:</label>
+          <label for="phone_number">:رقم الهاتف</label>
           <label class="form-control" >{{$detials->phone_number}}</label>
         </div>
         <div class="form-group">
-          <label for="email">Email:</label>
+          <label for="email">:البريد الإلكتروني</label>
           <label class="form-control" >{{$detials->email}}</label>
         </div>
         <div class="form-group">
-          <label for="age">AGE:</label>
+          <label for="age">:العمر</label>
           <label class="form-control">{{$detials->age}}</label>
         </div>
         <div class="form-group">
-          <label for="sex">TYPE:</label>
+          <label for="sex">:النوع</label>
           <label class="form-control">{{$detials->sex}}</label>
         </div>
         <div class="form-group">
-            <label for="country">country:</label>
+            <label for="country">:الدولة</label>
             <label class="form-control">{{$detials->country}}</label>
           </div>
         <div class="form-group">
-          <label for="state">state:</label>
+          <label for="state">:الولاية</label>
           <label class="form-control"  >{{$detials->state}}</label>
         </div>
         <div class="form-group">
-          <label for="Specialization">Specialization:</label>
+          <label for="Specialization">:التخصص</label>
           <label  class="form-control"  >{{$detials->Specialization}}</label>
         </div>
         {{-- ROW --}}
           <div class="row">
             {{-- Start qualification --}}
               <div class="col">
-                <label class="mt-3" for="">qualification Type : </label>
+                <label class="mt-3" for="">:نوع المؤهل </label>
                 <label class="mt-3" >{{$detials->qualification->name_ar}}</label>
               </div>
             {{-- End qualification --}}
             {{-- Start novel --}}
               <div class="col">
-                <label class="mt-3" for="">novel Type: </label>
+                <label class="mt-3" for=""> :الرواية </label>
                 <label class="mt-3" >{{$detials->novel->name_ar}}</label>
 
               </div>
             {{-- End novel --}}
             {{-- Start status --}}
               <div class="col">
-                <label class="mt-1" for="">status Type: </label>
+                <label class="mt-1" for="">: الحالة</label>
                 <label class="mt-3" >{{$detials->status->name_ar}}</label>
 
               </div>

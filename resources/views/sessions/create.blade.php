@@ -8,39 +8,39 @@
       <form action="{{route('session.store')}}" method = "post" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
-          <strong>name EN:</strong>
+          <strong>:الاسم باللغة الانجليزية</strong>
           <input type="text" name = "name_en" id = "name" class="form-control" >
         </div>
         <div class="form-group">
-          <strong>name AR:</strong>
+          <strong>:الاسم باللغة العربية</strong>
           <input type="text" name = "name_ar" id = "name" class="form-control" >
         </div>
         <div class="form-group">
-            <strong>start_date:</strong>
+            <strong>:تاريخ البداية</strong>
             <input type="date" name = "start_date" id = "start_date" class="form-control" >
           </div>
         <div class="form-group">
-          <strong>end_date:</strong>
+          <strong>:تاريخ النهاية</strong>
           <input type="date" name = "end_date" id = "end_date" class="form-control" >
         </div>
         <div class="form-group">
-          <strong>brief_ar:</strong>
+          <strong>:نبذة مختصرة باللغة العربية</strong>
           <input type="brief_ar" name = "brief_ar" id = "brief_ar" class="form-control" >
         </div>
         <div class="form-group">
-          <strong>brief_en:</strong>
+          <strong>:نبذة مختصرة باللغة الانجليزية</strong>
           <input type="text" name="brief_en" id="brief_en" class="form-control" >
         </div>
         
         <div class="col">
-          <label class="mt-2" for="">register_available</label>
+          <label class="mt-2" for="">هل التسجيل متاح</label>
           <select name="register_available" required class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-              <option value="0">No</option>
-              <option value="1">YES</option>
+              <option value="0">لا</option>
+              <option value="1">نعم</option>
           </select>
         </div>
         <div class="form-group">
-          <strong>reason_registry_suspension:</strong>
+          <strong>:سبب ايقاف التسجيل بالدورة (اذا الكان التسجيل غير متاح)</strong>
           <input type="text" name = "reason_registry_suspension" id = "reason_registry_suspension" class="form-control" >
         </div>
 
@@ -48,7 +48,7 @@
           <div class="row">
             {{-- Start mosque --}}
               <div class="col">
-                <label class="mt-2" for="">mosque name</label>
+                <label class="mt-2" for=""> اسم المسجد</label>
                 <select name="mosque_id" required class="custom-select mr-sm-2"
                 id="inlineFormCustomSelect">
                   <option></option>
@@ -66,7 +66,7 @@
           <div class="row">
             {{-- Start teacher --}}
               <div class="col">
-                <label class="mt-2" for="">teacher name</label>
+                <label class="mt-2" for="">اسم المشرف</label>
                 <select name="teacher_id" required class="custom-select mr-sm-2"
                 id="inlineFormCustomSelect">
                   <option></option>
@@ -80,7 +80,7 @@
             {{-- End teacher --}}
             {{-- Start session_type --}}
               <div class="col">
-                <label class="mt-2" for="">session Type</label>
+                <label class="mt-2" for=""> نوع الدورة</label>
                 <select name="session_type_id" required class="custom-select mr-sm-2"
                 id="inlineFormCustomSelect">
                   <option></option>
@@ -96,14 +96,14 @@
         {{-- ROW --}}
         
         <div class="form-group">
-            <strong>mosque Image:</strong>
+            <strong>:صورة للدورة</strong>
              <input type="file" name="image" class="form-control" placeholder="mosque img">
             @error('image')
               <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
            @enderror
         </div>
 
-        <button type = "submit" class = "btn btn-success">Submit</button>
+        <button type = "submit" class = "btn btn-success">حفظ</button>
       </form>
     </div>
   </div>

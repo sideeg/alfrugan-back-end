@@ -10,15 +10,15 @@
             <thead>
 
                 <th>ID</th>
-                <th>Person Name</th>
-                <th>session name</th>
-                <th>type</th>
-                <th>Phone</th>
-                <th>novel </th>
-                <th>status</th>
-                <th>rate</th>
+                <th>اسم الشخص</th>
+                <th> اسم الدورة</th>
+                <th>النوع</th>
+                <th>رقم الهاتف</th>
+                <th>الرواية </th>
+                <th>الحالة</th>
+                <th>التقييم</th>
 
-                <th  width="255px"><i class="fa fa-gear fa-lg mr"></i>Operations</th>
+                <th  width="255px"><i class="fa fa-gear fa-lg mr"></i>العمليات</th>
 
 
             </thead>

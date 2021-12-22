@@ -9,15 +9,15 @@
             @csrf
                 @method('PUT')
         <div class="form-group">
-          <label for="name">name:</label>
+          <label for="name">الاسم:</label>
           <input type="text" name = "name" id = "name" class="form-control" value="{{$mosque->name}}">
         </div>
         <div class="form-group">
-            <label for="brief_location_description">brief_location_description:</label>
+            <label for="brief_location_description">وصف مختصر لموقع المسجد:</label>
             <input type="text" name = "brief_location_description" id = "brief_location_description" class="form-control" value="{{$mosque->brief_location_description}}">
           </div>
         <div class="form-group">
-          <label for="full_location_description">full_location_description:</label>
+          <label for="full_location_description">وصف كامل لموقع المسجد:</label>
           <input type="text" name = "full_location_description" id = "full_location_description" class="form-control" value="{{$mosque->full_location_description}}" >
         </div>
         <div class="form-group">
@@ -30,7 +30,7 @@
         </div>
 
 
-        <button type = "submit" class = "btn btn-success">Submit</button>
+        <button type = "submit" class = "btn btn-success">حفظ</button>
       </form>
     </div>
   </div>

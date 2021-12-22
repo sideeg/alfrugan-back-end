@@ -9,12 +9,12 @@
         @csrf
         @method('POST')
         <div class="form-group">
-          <strong>name:</strong>
+          <strong>:اسم المجموعة</strong>
           <input type="text" name = "name" id = "name" class="form-control" >
         </div>
         {{-- Start teacher --}}
           <div class="col">
-            <label class="mt-2" for="">teacher name</label>
+            <label class="mt-2" for="">اسم المحفظ</label>
             <select name="teacher_id" required class="custom-select mr-sm-2"id="inlineFormCustomSelect">
               <option></option>
               @foreach ($teachers as $teacher)
@@ -27,7 +27,7 @@
         {{-- End teacher --}}
         {{-- Start session --}}
           <div class="col">
-            <label class="mt-2" for="">session name</label>
+            <label class="mt-2" for="">اسم الدورة</label>
             <select name="session_id" required class="custom-select mr-sm-2"id="inlineFormCustomSelect">
               <option></option>
               @foreach ($sessions as $session)
@@ -43,7 +43,7 @@
 
 
 
-        <button type = "submit" class = "btn btn-success">Submit</button>
+        <button type = "submit" class = "btn btn-success">حفظ</button>
       </form>
     </div>
   </div>

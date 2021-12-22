@@ -62,7 +62,7 @@ class mosquesController extends Controller
         //Create And Save
         $mosque = new mosque() ;
         if ($files = $request->file('image')) {
-            $destinationPath = 'public/image/'; // upload path
+            $destinationPath = 'public/images/'; // upload path
             $mosqueImage = date('YmdHis') . "." . $files->getClientOriginalExtension();
             $files->move($destinationPath, $mosqueImage);
             $mosque['image'] = "$mosqueImage";
@@ -135,7 +135,7 @@ class mosquesController extends Controller
         // $mosque->image                       =$path ;
             //edit img
         if ($files = $request->file('image')) {
-            $destinationPath = 'public/image/'; // upload path
+            $destinationPath = 'public/images/'; // upload path
             $profileImage = date('YmdHis') . "." . $files->getClientOriginalExtension();
             $files->move($destinationPath, $profileImage);
             $mosque['image'] = "$profileImage";
