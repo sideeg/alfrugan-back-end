@@ -86,7 +86,7 @@ class sessionsController extends Controller
         $session->teacher_id=$request->teacher_id; 
 
         if ($files = $request->file('image')) {
-            $destinationPath = '/image/session/'; // upload path
+            $destinationPath = 'public/image/session/'; // upload path
             $sessionImage = date('YmdHis') . "." . $files->getClientOriginalExtension();
             $files->move($destinationPath, $sessionImage);
             $session['image'] = "$sessionImage";
@@ -167,7 +167,7 @@ class sessionsController extends Controller
         $session->teacher_id=$request->teacher_id; 
 
         if ($files = $request->file('image')) {
-            $destinationPath = '/image/session/'; // upload path
+            $destinationPath = 'public/image/session/'; // upload path
             $sessionImage = date('YmdHis') . "." . $files->getClientOriginalExtension();
             $files->move($destinationPath, $sessionImage);
             $session['image'] = "$sessionImage";
