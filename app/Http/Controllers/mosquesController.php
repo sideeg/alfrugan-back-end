@@ -57,12 +57,12 @@ class mosquesController extends Controller
             'full_location_description'  =>  'required|max:50',
             'image'                      => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',));
 
-        $path = $request->file('image')->store('public/images');
+        $path = $request->file('image')->store('images/mosques');
 
         //Create And Save
         $mosque = new mosque() ;
         if ($files = $request->file('image')) {
-            $destinationPath = 'public/images/'; // upload path
+            $destinationPath = 'images/mosques'; // upload path
             $mosqueImage = date('YmdHis') . "." . $files->getClientOriginalExtension();
             $files->move($destinationPath, $mosqueImage);
             $mosque['image'] = "$mosqueImage";
@@ -135,7 +135,7 @@ class mosquesController extends Controller
         // $mosque->image                       =$path ;
             //edit img
         if ($files = $request->file('image')) {
-            $destinationPath = 'public/images/'; // upload path
+            $destinationPath = 'images/mosques'; // upload path
             $profileImage = date('YmdHis') . "." . $files->getClientOriginalExtension();
             $files->move($destinationPath, $profileImage);
             $mosque['image'] = "$profileImage";
