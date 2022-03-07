@@ -32,7 +32,7 @@ class groupController extends Controller
         // $groups = group::all();
         
         // return view('groups.index')->withgroups($groups);
-        return $this->filterBySession(1);
+        return $this->filterBySession(ModelsSession::first()->id);
     }
 
     public function filterBySession($id)
