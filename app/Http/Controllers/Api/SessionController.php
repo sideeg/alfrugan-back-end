@@ -74,7 +74,7 @@ class SessionController extends Controller
         if($session_requset){
             return response()->json(['error'=>True,"message"=>"this student is alrady send registered request in this session please wait for the admin response","code"=>6] ,400);
         }else{
-            $form = form::where("student_id",$request->student_id)->first();
+            $form = form::where([["student_id",$request->student_id],["session_id",$request->session_id]])->first();
             if($form){
                 // return response()->json(['error'=>false,"message"=>"","data"=>$form] ,200);
                 return response()->json(['error'=>True,"message"=>"this student is alrady  registered  in this session please contact the admin","code"=>8] ,400);
@@ -82,7 +82,7 @@ class SessionController extends Controller
             }else{
                 $new_request = new session_reqester_request();
                 $new_request->session_id = $request->session_id;
-                $new_request->teacher_id = $request->teacher_id;
+                // $new_request->teacher_id = $request->teacher_id;
                 $new_request->student_id = $request->student_id;
 
                 $new_request->save();
@@ -129,14 +129,14 @@ class SessionController extends Controller
         if($session_requset){
             return response()->json(['error'=>True,"message"=>"this teacher is alrady send registered request in this session please wait for the admin response","code"=>6] ,400);
         }else{
-            $group = group::where("teacher_id",$request->teacher_id)->first();
+            $group = group::where([["teacher_id",$request->teacher_id],["session_id",$request->session_id]])->first();
             if($group){
                 return response()->json(['error'=>false,"message"=>"","data"=>$group] ,200);
             }else{
                 $new_request = new session_reqester_request();
                 $new_request->session_id = $request->session_id;
                 $new_request->teacher_id = $request->teacher_id;
-                $new_request->student_id = $request->student_id;
+                // $new_request->student_id = $request->student_id;
 
                 $new_request->save();
 
