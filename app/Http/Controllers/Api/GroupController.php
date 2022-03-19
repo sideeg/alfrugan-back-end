@@ -13,7 +13,7 @@ class GroupController extends Controller
 {
     public function allStudentByGroup($id)
     {
-        $students = group_detials::with("student",'group')->where("group_id",$id)->get();
+        $students = group_detials::with("student",'group','group.session')->where("group_id",$id)->get();
 
         return response()->json(['error'=>false,"message"=>"","data"=>$students] ,200);
 
