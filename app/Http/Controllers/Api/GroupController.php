@@ -26,7 +26,7 @@ class GroupController extends Controller
      */
     public function notDistributionStudent( $id)
     {
-        $notDistributionStudent = form::with('student')->where([['session_id',$id],['group',null]])->get();
+        $notDistributionStudent = form::with('student')->where([['session_id',$id],['group_id',null]])->get();
         return response()->json(['error'=>false,"message"=>"","data"=>$notDistributionStudent] ,200);
 
     }

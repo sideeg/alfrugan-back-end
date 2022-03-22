@@ -70,6 +70,19 @@ class groupDetialsController extends Controller
         $form->group_id=$request->group_id;
         $form->save();
 
+        $form_detail = new form_detail();
+        $form_detail->teacher_id = $group->teacher_id;
+        $form_detail->form_id = $form->id;
+        $form_detail->entry_date = "2022-03-22 12:03:41";
+        $form_detail->start_Surah = "blank";
+        $form_detail->start_ayah = "blank";
+        $form_detail->end_Surah = "blank";
+        $form_detail->end_ayah = "blank";
+        $form_detail->rate = "0.0";
+        $form_detail->notes = "blank";
+
+        $form_detail->save();
+
         
         return $this->index($request->group_id);
     }

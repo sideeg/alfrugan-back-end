@@ -8,6 +8,7 @@ use App\Models\session_reqester_request;
 use App\Models\form;
 use App\Models\student;
 use App\Models\teacher;
+use App\Models\form_detail;
 use Session;
 
 class session_reqester_requestController extends Controller
@@ -158,6 +159,7 @@ class session_reqester_requestController extends Controller
         $form->session_id = $request->session_id;
         $form->save();
 
+        
         return $this->destroy($id);
     }
 
