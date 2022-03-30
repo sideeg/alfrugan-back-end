@@ -25,7 +25,7 @@ class SessionController extends Controller
         //     $query->where('session_type_id', '1');
         // })->get();
 
-        $sessions = session::where("session_type_id",3)->with("mosque")->get();
+        $sessions = session::where("session_type_id",1)->with("mosque")->get();
         return response()->json(['error'=>false,"message"=>"","data"=>$sessions] ,200);
 
     }
@@ -48,7 +48,7 @@ class SessionController extends Controller
      */
     public function getOnlineSession()
     {
-        $close_seession = session::with("mosque")->where("session_type_id",2)->get();
+        $close_seession = session::with("mosque")->where("session_type_id",3)->get();
         return response()->json(['error'=>false,"message"=>"","data"=>$close_seession] ,200);
 
     }
