@@ -54,6 +54,7 @@ Route::group(['namespace' => 'App\Http\Controllers\Api'], function(){
 
     Route::get('session/open-session', "SessionController@getOpenSessionMosques");
     Route::get('session/close-session', "SessionController@getCloseSession");
+    Route::get('session/online-session', "SessionController@getOnlineSession");
     Route::get('session/{id}', "SessionController@sessionById");
     Route::post('student/session/reqister', "SessionController@studentSessionRegisterRequest");
 
